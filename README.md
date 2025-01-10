@@ -1,1 +1,1 @@
-# gemma-2-swahili.github.io
+# Adapting Gemma 2 for Swahili 
