@@ -4,10 +4,12 @@ on:
     branches:
       - main  # Trigger deployment on push to the main branch
   workflow_dispatch:  # Allow manual trigger from GitHub Actions UI
+
 permissions:
   contents: read  # Read repository contents
   pages: write    # Write to GitHub Pages
   id-token: write # To authenticate for GitHub Pages deployment
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,9 +28,10 @@ jobs:
       - name: Build website
         run: npm run build  # Run the build command (for create-react-app, it's "npm run build")
       - name: Upload build artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./build  # Use ./build instead of ./dist since create-react-app generates the build in the 'build' directory
+
   deploy:
     needs: build  # This job depends on the build job being successful
     runs-on: ubuntu-latest
