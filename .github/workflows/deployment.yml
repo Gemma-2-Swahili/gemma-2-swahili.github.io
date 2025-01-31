@@ -1,55 +1,48 @@
 name: Deploy to GitHub Pages
-
 on:
   push:
     branches:
-      - main  # Trigger deployment on push to the main branch
-  workflow_dispatch:  # Allow manual trigger from GitHub Actions UI
+      - main
+  workflow_dispatch:
 
 permissions:
-  contents: read  # Read repository contents
-  pages: write    # Write to GitHub Pages
-  id-token: write # To authenticate for GitHub Pages deployment
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4  # Checkout the repository code
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'  # Set the Node.js version (or any version compatible with your app)
-          cache: 'npm'         # Cache npm dependencies for faster builds
+          node-version: '18'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci  # Clean install dependencies using npm
+        run: |
+          npm cache clean --force
+          npm install
 
       - name: Build website
-        run: npm run build  # Run the build command (for create-react-app, it’s "npm run build")
+        run: npm run build
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v4
         with:
-          name: github-pages
-          path: ./build  # Use ./build instead of ./dist since create-react-app generates the build in the 'build' directory
+          path: ./build
 
   deploy:
-    needs: build  # This job depends on the build job being successful
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4  # Checkout repository again in deploy job
-
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4  # Use the deploy-pages action for GitHub Pages deployment
-        with:
-          branch: gh-pages     # Deploy to the 'gh-pages' branch
-          folder: build        # Folder containing the production-ready build (from the build job)
+        uses: actions/deploy-pages@v4
