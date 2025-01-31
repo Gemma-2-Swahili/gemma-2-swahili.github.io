@@ -26,9 +26,8 @@ jobs:
       - name: Build website
         run: npm run build  # Run the build command (for create-react-app, it's "npm run build")
       - name: Upload build artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v4
         with:
-          name: github-pages
           path: ./build  # Use ./build instead of ./dist since create-react-app generates the build in the 'build' directory
   deploy:
     needs: build  # This job depends on the build job being successful
@@ -42,6 +41,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4  # Use the deploy-pages action for GitHub Pages deployment
-        with:
-          branch: gh-pages     # Deploy to the 'gh-pages' branch
-          folder: build        # Folder containing the production-ready build (from the build job)
