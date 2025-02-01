@@ -33,7 +33,7 @@ const LandingPage = () => {
       <div className="max-w-6xl mx-auto px-4 mb-24">
         <div className="rounded-lg overflow-hidden">
           <img
-            src="/api/placeholder/1920/1080"
+            src="/public/images/kilimanjaro.jpg"
             alt="Kilimanjaro landscape"
             className="w-full h-full object-cover"
           />
