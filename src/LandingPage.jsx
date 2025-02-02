@@ -70,7 +70,7 @@ const LandingPage = () => {
             <ChevronRight className="ml-2 h-4 w-4" />
           </a>
           <a 
-            href="https://github.com/Gemma-2-Swahili/Gemma-2-Swahili-Models/tree/main/Technical-Reports" 
+            href="technical-reports.html" 
             target="_blank"
             rel="noopener noreferrer" 
             className="text-white border border-white/20 px-6 py-2 rounded-full flex items-center hover:bg-white/10"
@@ -153,53 +153,53 @@ const LandingPage = () => {
       </div>
 
       {/* Model Capabilities section */}
-<div className="max-w-4xl mx-auto px-4 mb-24">
-  <h2 className="text-3xl font-medium mb-8 text-center">Model Capabilities</h2>
-  <ModelExample 
-    title="Creative Writing (Gemma 2B swahili IT)"
-    prompt="Tunga hadithi fupi kuhusu Twiga"
-    response={
-      <div className="space-y-4">
-        {[
-          "Twiga alikuwa mnyama mwitu wa asili ambao alikuwa na furaha ya kuishi katika jiji la bandarini. Alikuwa amefungwa kwa nyumba yake ya kawaida, lakini kwa sababu ya uchovu wake, alikuwa hana muda wa kucheza.",
-          
-          "Hata hivyo, wakati huo huo, jiji lake lilikuwa ikipigwa na mabadiliko ya hali ya hewa. Maji yalikuwa ya kupotea, na mnamo siku moja, Twiga aliona kuwa kuna maji ya ziwa yalipotea. Kulikuwa na hali mbaya kwa Twiga, kwani alikuwa na hofu ya kuchelewesha mabadiliko hayo na kupoteza nyumba yake ya kawaida.",
-          
-          "Twiga alitaka kupata maji ya ziwa, lakini hakujua jinsi ya kufanya hivyo. Alitumia wakati wake kuangalia kwenye barabara, lakini hakuwa na uhakika jinsi ya kufikia ziwa.",
-          
-          "Baada ya muda, Twiga alimwona mtu aliyeketi kwenye kiti karibu na ziwa na alimwomba msaada.",
-          
-          "Mtu huyo alisema kuwa alikuwa na mtihani wa kufikia ziwa, na Twiga alimfuatilia. Kisha, mtihani huo ulikuwa wa kufikiria na kuwasiliana na kila kitu kilichopo karibu. Twiga alipata msaada na aliweza kufikia ziwa.",
-          
-          "Twiga alimwona watu wengi waliokuwa wakifanya kazi kwenye ziwa, na aliona kuwa unaweza kufanya kazi yake kama mnyama.",
-          
-          "Baada ya siku, Twiga alitambua kuwa alikuwa mnyama mwitu na alikuwa amefurahi kufanya kazi. Alikuwa na furaha ya kufanya kazi kwa sababu ya kuwa mnyama mwitu na kuwa na uhakika kwamba angeweza kufanya kazi kwa ajili ya taifa lake."
-        ].map((paragraph, index) => (
-          <p key={index}>{paragraph}</p>
-        ))}
+      <div className="max-w-4xl mx-auto px-4 mb-24">
+        <h2 className="text-3xl font-medium mb-8 text-center">Model Capabilities</h2>
+        <ModelExample 
+          title="Creative Writing (Gemma 2B swahili IT)"
+          prompt="Tunga hadithi fupi kuhusu Twiga"
+          response={
+            <div className="space-y-4">
+              {[
+                "Twiga alikuwa mnyama mwitu wa asili ambaye alikuwa na furaha ya kuishi katika jiji la bandarini. Alikuwa amefungwa kwa nyumba yake ya kawaida, lakini kwa sababu ya uchovu wake, alikuwa hana muda wa kucheza.",
+                
+                "Hata hivyo, wakati huo huo, jiji lake lilikuwa ikipigwa na mabadiliko ya hali ya hewa. Maji yalikuwa ya kupotea, na mnamo siku moja, Twiga aliona kuwa kuna maji ya ziwa yalipotea. Kulikuwa na hali mbaya kwa Twiga, kwani alikuwa na hofu ya kuchelewesha mabadiliko hayo na kupoteza nyumba yake ya kawaida.",
+                
+                "Twiga alitaka kupata maji ya ziwa, lakini hakujua jinsi ya kufanya hivyo. Alitumia wakati wake kuangalia kwenye barabara, lakini hakuwa na uhakika jinsi ya kufikia ziwa.",
+                
+                "Baada ya muda, Twiga alimwona mtu aliyeketi kwenye kiti karibu na ziwa na alimwomba msaada.",
+                
+                "Mtu huyo alisema kuwa alikuwa na mtihani wa kufikia ziwa, na Twiga alimfuatilia. Kisha, mtihani huo ulikuwa wa kufikiria na kuwasiliana na kila kitu kilichopo karibu. Twiga alipata msaada na aliweza kufikia ziwa.",
+                
+                "Twiga alimwona watu wengi waliokuwa wakifanya kazi kwenye ziwa, na aliona kuwa unaweza kufanya kazi yake kama mnyama.",
+                
+                "Baada ya siku, Twiga alitambua kuwa alikuwa mnyama mwitu na alikuwa amefurahi kufanya kazi. Alikuwa na furaha ya kufanya kazi kwa sababu ya kuwa mnyama mwitu na kuwa na uhakika kwamba angeweza kufanya kazi kwa ajili ya taifa lake."
+              ].map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+            </div>
+          }
+        />
+        <ModelExample 
+          title="Comprehensive Writing (Gemma 2B Swahili IT)"
+          prompt="Eleza dhana ya uchumi wa kidijitali na umuhimu wake katika ulimwengu wa leo"
+          response={
+            <div className="space-y-4">
+              {[
+                "Uchumi wa kidijitali ni uchumi uliofungwa na mbinu ya teknolojia ya mtandaoni. Huonyesha mifumo ya uhamasishaji, ufuatiliaji wa biashara, na ufuatiliaji wa rasilimali. Uhamasishaji wa kidijitali ni muhimu kwa biashara, watu wanapojaribu kuingia kwenye soko la bidhaa au huduma. Ufuatiliaji wa rasilimali unafanya kazi kwa kutoa ufahamu juu ya utendaji wa biashara. Ufuatiliaji wa biashara unafanya kazi kwa kutoa ufahamu juu ya utendaji wa biashara.",
+                
+                "Uchumi wa kidijitali ni muhimu kwa sababu inawezesha mawasiliano yenye haraka na yenye gharama nafuu, na inawezesha biashara za muda mrefu na za muda mfupi. Inasaidia watu kuingia kwenye soko la bidhaa na huduma, na inapunguza gharama za biashara kwa kuweka rasilimali za mawasiliano ya ndani.",
+                
+                "Uchumi wa kidijitali unahusishwa na uhamasishaji wa bidhaa, ambayo ni muhimu kwa sababu inaleta faida kwa watu wanaofanya biashara. Uhamasishaji wa kidijitali unaweza kuongeza ufanisi na ufanisi wa biashara, na kuongeza faida za biashara.",
+                
+                "Uchumi wa kidijitali ni muhimu sana katika ulimwengu wa leo. Inawezesha biashara, watu wanaofanya biashara, na watu wengine wanaofanya biashara. Uhamasishaji wa kidijitali ni muhimu kwa biashara, watu wanaofanya biashara, na watu wengine wanaofanya biashara. Ufuatiliaji wa rasilimali na biashara ni muhimu kwa biashara, watu wanaofanya biashara, na watu wengine wanaofanya biashara. Uchumi wa kidijitali ni muhimu sana katika ulimwengu wa leo, na inahusishwa na mawasiliano yenye haraka, yenye gharama nafuu, na uhamasishaji wa bidhaa."
+              ].map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+            </div>
+          }
+        />
       </div>
-    }
-  />
-  <ModelExample 
-    title="Comprehensive Writing (Gemma 2B Swahili IT)"
-    prompt="Eleza dhana ya uchumi wa kidijitali na umuhimu wake katika ulimwengu wa leo"
-    response={
-      <div className="space-y-4">
-        {[
-          "Uchumi wa kidijitali ni uchumi uliofungwa na mbinu ya teknolojia ya mtandaoni. Huonyesha mifumo ya uhamasishaji, ufuatiliaji wa biashara, na ufuatiliaji wa rasilimali. Uhamasishaji wa kidijitali ni muhimu kwa biashara, watu wanapojaribu kuingia kwenye soko la bidhaa au huduma. Ufuatiliaji wa rasilimali unafanya kazi kwa kutoa ufahamu juu ya utendaji wa biashara. Ufuatiliaji wa biashara unafanya kazi kwa kutoa ufahamu juu ya utendaji wa biashara.",
-          
-          "Uchumi wa kidijitali ni muhimu kwa sababu inawezesha mawasiliano yenye haraka na yenye gharama nafuu, na inawezesha biashara za muda mrefu na za muda mfupi. Inasaidia watu kuingia kwenye soko la bidhaa na huduma, na inapunguza gharama za biashara kwa kuweka rasilimali za mawasiliano ya ndani.",
-          
-          "Uchumi wa kidijitali unahusishwa na uhamasishaji wa bidhaa, ambayo ni muhimu kwa sababu inaleta faida kwa watu wanaofanya biashara. Uhamasishaji wa kidijitali unaweza kuongeza ufanisi na ufanisi wa biashara, na kuongeza faida za biashara.",
-          
-          "Uchumi wa kidijitali ni muhimu sana katika ulimwengu wa leo. Inawezesha biashara, watu wanaofanya biashara, na watu wengine wanaofanya biashara. Uhamasishaji wa kidijitali ni muhimu kwa biashara, watu wanaofanya biashara, na watu wengine wanaofanya biashara. Ufuatiliaji wa rasilimali na biashara ni muhimu kwa biashara, watu wanaofanya biashara, na watu wengine wanaofanya biashara. Uchumi wa kidijitali ni muhimu sana katika ulimwengu wa leo, na inahusishwa na mawasiliano yenye haraka, yenye gharama nafuu, na uhamasishaji wa bidhaa."
-        ].map((paragraph, index) => (
-          <p key={index}>{paragraph}</p>
-        ))}
-      </div>
-    }
-  />
-</div>
 
       {/* Benchmarks section - Full width graphs */}
       <div className="max-w-5xl mx-auto px-4 mb-24">

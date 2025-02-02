@@ -5,23 +5,23 @@ const TechnicalReportsPage = () => {
   const reports = [
     { 
       title: "Gemma2 2b Swahili Instruct", 
-      file: "/technical-reports/Gemma2_2b_Swahili_Instruct.pdf" 
+      file: "/technical-reports/Gemma2 2b Swahili Instruct.pdf" 
     },
     { 
       title: "Gemma2 9b Swahili Instruct", 
-      file: "/technical-reports/Gemma2_9b_Swahili_Instruct.pdf" 
+      file: "/technical-reports/Gemma2 9b Swahili Instruct.pdf" 
     },
     { 
       title: "Gemma2 27b Swahili Instruct", 
-      file: "/technical-reports/Gemma2_27b_Swahili_Instruct.pdf" 
+      file: "/technical-reports/Gemma2 27b Swahili Instruct.pdf" 
     },
     { 
       title: "Gemma2 2b Swahili Preview", 
-      file: "/technical-reports/Gemma2_2b_Swahili_Preview.pdf" 
+      file: "/technical-reports/Gemma2 2b Swahili Preview.pdf" 
     },
     { 
       title: "Gemma2 Swahili Models Benchmarking Report", 
-      file: "/technical-reports/Gemma2_Swahili_Models_Benchmarking_Report.pdf" 
+      file: "/technical-reports/Gemma2 Swahili Models Benchmarking Report.pdf" 
     }
   ];
 
@@ -44,29 +44,27 @@ const TechnicalReportsPage = () => {
             </div>
           ))}
         </div>
-        
-        {selectedReport && (
-          <div className="mt-12">
-            <h2 className="text-2xl font-medium mb-4 text-center">{selectedReport.title}</h2>
-            <div className="rounded-lg overflow-hidden shadow-lg">
-              <iframe
-                src={selectedReport.file}
-                className="w-full h-[800px]"
-                frameBorder="0"
-                title={selectedReport.title}
-              ></iframe>
-            </div>
-            <div className="mt-4 flex justify-center">
-              <button
-                onClick={() => setSelectedReport(null)}
-                className="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-200"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        )}
       </div>
+
+      {/* Modal Overlay for Viewing PDF */}
+      {selectedReport && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
+          <div className="relative w-full max-w-4xl h-screen p-4 overflow-y-auto">
+            <button
+              onClick={() => setSelectedReport(null)}
+              className="absolute top-4 right-8 z-10 bg-white text-black px-4 py-2 rounded-full hover:bg-gray-200"
+            >
+              Close
+            </button>
+            <iframe
+              src={selectedReport.file}
+              className="w-full h-full rounded-lg shadow-lg"
+              frameBorder="0"
+              title={selectedReport.title}
+            ></iframe>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
