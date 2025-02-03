@@ -206,7 +206,7 @@ const LandingPage = () => {
         <h2 className="text-3xl font-medium mb-12 text-center">Performance Benchmarks</h2>
         
         <BenchmarkGraph 
-          title="MMLU Performance Comparison"
+          title="MMLU (Massive Multitask Language Understanding) Performance Comparison"
           imagePath="/images/mmlu-graph.png"
           description="Comparison of model performance on Swahili MMLU benchmark across different model sizes"
         />
