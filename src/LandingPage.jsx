@@ -156,7 +156,7 @@ const LandingPage = () => {
       <div className="max-w-4xl mx-auto px-4 mb-24">
         <h2 className="text-3xl font-medium mb-8 text-center">Model Capabilities</h2>
         <ModelExample 
-          title="Creative Writing (Gemma 2B swahili IT)"
+          title="Creative Writing Saample (Model: Gemma 2B swahili IT)"
           prompt="Tunga hadithi fupi kuhusu Twiga"
           response={
             <div className="space-y-4">
@@ -181,7 +181,7 @@ const LandingPage = () => {
           }
         />
         <ModelExample 
-          title="Comprehensive Writing (Gemma 2B Swahili IT)"
+          title="Comprehensive Writing Sample (Model: Gemma 2B Swahili IT)"
           prompt="Eleza dhana ya uchumi wa kidijitali na umuhimu wake katika ulimwengu wa leo"
           response={
             <div className="space-y-4">
