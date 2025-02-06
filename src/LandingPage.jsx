@@ -61,7 +61,7 @@ const LandingPage = () => {
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
           <a 
-            href="https://huggingface.co/collections/Alfaxad/gemma-2-swahili-678c96591c0169c0bc1d4c34" 
+            href="https://www.kaggle.com/models/alfaxadeyembe/gemma-2-swahili" 
             target="_blank"
             rel="noopener noreferrer" 
             className="bg-white text-black px-6 py-2 rounded-full flex items-center hover:bg-gray-200"
